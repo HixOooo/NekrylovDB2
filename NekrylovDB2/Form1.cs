@@ -10,11 +10,27 @@ namespace NekrylovDB2
     public partial class MainForm : MaterialForm
     {
         private readonly string _connectionString = "Host=195.46.187.72;Username=postgres;Password=1337;Database=RuslanFinishDB2";
+        private readonly int _userRole; // Поле для хранения роли пользователя
 
+        // Конструктор по умолчанию (без аргументов)
         public MainForm()
         {
             InitializeComponent();
+            InitializeMaterialSkin();
+            LoadRecentData();
+        }
 
+        // Новый конструктор, принимающий роль пользователя
+        public MainForm(int userRole)
+        {
+            _userRole = userRole; // Сохраняем роль пользователя
+            InitializeComponent();
+            InitializeMaterialSkin();
+            LoadRecentData();
+        }
+
+        private void InitializeMaterialSkin()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -25,7 +41,10 @@ namespace NekrylovDB2
                 Accent.LightBlue200,
                 TextShade.WHITE
             );
+        }
 
+        private void LoadRecentData()
+        {
             LoadRecentProducts();
             LoadRecentSupplies();
             LoadRecentOrders();
@@ -81,9 +100,7 @@ namespace NekrylovDB2
 
         private void btnRefreshRecentData_Click(object sender, EventArgs e)
         {
-            LoadRecentProducts();
-            LoadRecentSupplies();
-            LoadRecentOrders();
+            LoadRecentData();
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -110,13 +127,22 @@ namespace NekrylovDB2
             reportsForm.ShowDialog();
         }
 
-       
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+            // Обработка клика по label2
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

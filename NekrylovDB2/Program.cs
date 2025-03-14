@@ -11,7 +11,9 @@ namespace MaterialFormExample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            // Запуск главной формы напрямую
+            Application.Run(new MainForm(1)); // Передаем роль пользователя (например, 1 для администратора)
         }
     }
 }

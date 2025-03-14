@@ -8,13 +8,14 @@
         private MaterialSkin.Controls.MaterialButton btnSupplies;
         private MaterialSkin.Controls.MaterialButton btnOrders;
         private MaterialSkin.Controls.MaterialButton btnReports;
-        private MaterialSkin.Controls.MaterialButton btnUsers;
-        private MaterialSkin.Controls.MaterialButton btnSettings;
         private MaterialSkin.Controls.MaterialButton btnExit;
         private MaterialSkin.Controls.MaterialButton btnRefreshRecentData;
         private System.Windows.Forms.DataGridView dataGridRecentProducts;
         private System.Windows.Forms.DataGridView dataGridRecentSupplies;
         private System.Windows.Forms.DataGridView dataGridRecentOrders;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
 
         protected override void Dispose(bool disposing)
         {
@@ -31,8 +32,6 @@
             this.btnSupplies = new MaterialSkin.Controls.MaterialButton();
             this.btnOrders = new MaterialSkin.Controls.MaterialButton();
             this.btnReports = new MaterialSkin.Controls.MaterialButton();
-            this.btnUsers = new MaterialSkin.Controls.MaterialButton();
-            this.btnSettings = new MaterialSkin.Controls.MaterialButton();
             this.btnExit = new MaterialSkin.Controls.MaterialButton();
             this.btnRefreshRecentData = new MaterialSkin.Controls.MaterialButton();
             this.dataGridRecentProducts = new System.Windows.Forms.DataGridView();
@@ -130,40 +129,6 @@
             this.btnReports.UseVisualStyleBackColor = true;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // btnUsers
-            // 
-            this.btnUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnUsers.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnUsers.Depth = 0;
-            this.btnUsers.HighEmphasis = true;
-            this.btnUsers.Icon = null;
-            this.btnUsers.Location = new System.Drawing.Point(0, 0);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnUsers.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnUsers.Size = new System.Drawing.Size(64, 36);
-            this.btnUsers.TabIndex = 12;
-            this.btnUsers.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnUsers.UseAccentColor = false;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSettings.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSettings.Depth = 0;
-            this.btnSettings.HighEmphasis = true;
-            this.btnSettings.Icon = null;
-            this.btnSettings.Location = new System.Drawing.Point(0, 0);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnSettings.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSettings.Size = new System.Drawing.Size(64, 36);
-            this.btnSettings.TabIndex = 11;
-            this.btnSettings.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSettings.UseAccentColor = false;
-            // 
             // btnExit
             // 
             this.btnExit.AutoSize = false;
@@ -172,7 +137,7 @@
             this.btnExit.Depth = 0;
             this.btnExit.HighEmphasis = true;
             this.btnExit.Icon = null;
-            this.btnExit.Location = new System.Drawing.Point(38, 422);
+            this.btnExit.Location = new System.Drawing.Point(38, 530);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExit.Name = "btnExit";
@@ -209,45 +174,48 @@
             // dataGridRecentProducts
             // 
             this.dataGridRecentProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRecentProducts.Location = new System.Drawing.Point(695, 113);
-            this.dataGridRecentProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridRecentProducts.Location = new System.Drawing.Point(180, 97);
+            this.dataGridRecentProducts.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridRecentProducts.Name = "dataGridRecentProducts";
-            this.dataGridRecentProducts.Size = new System.Drawing.Size(375, 122);
+            this.dataGridRecentProducts.Size = new System.Drawing.Size(331, 468);
             this.dataGridRecentProducts.TabIndex = 8;
             // 
             // dataGridRecentSupplies
             // 
             this.dataGridRecentSupplies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRecentSupplies.Location = new System.Drawing.Point(695, 252);
-            this.dataGridRecentSupplies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridRecentSupplies.Location = new System.Drawing.Point(537, 97);
+            this.dataGridRecentSupplies.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridRecentSupplies.Name = "dataGridRecentSupplies";
-            this.dataGridRecentSupplies.Size = new System.Drawing.Size(375, 122);
+            this.dataGridRecentSupplies.Size = new System.Drawing.Size(417, 468);
             this.dataGridRecentSupplies.TabIndex = 9;
             // 
             // dataGridRecentOrders
             // 
             this.dataGridRecentOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRecentOrders.Location = new System.Drawing.Point(695, 391);
-            this.dataGridRecentOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridRecentOrders.Location = new System.Drawing.Point(976, 97);
+            this.dataGridRecentOrders.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridRecentOrders.Name = "dataGridRecentOrders";
-            this.dataGridRecentOrders.Size = new System.Drawing.Size(375, 122);
+            this.dataGridRecentOrders.Size = new System.Drawing.Size(403, 468);
             this.dataGridRecentOrders.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(693, 98);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label1.Location = new System.Drawing.Point(233, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.Size = new System.Drawing.Size(223, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Последние продукты";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(693, 237);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label2.Location = new System.Drawing.Point(639, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.Size = new System.Drawing.Size(219, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Последние поставки";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -255,17 +223,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(693, 376);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label3.Location = new System.Drawing.Point(1075, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(200, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "Последние заказы";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 569);
+            this.ClientSize = new System.Drawing.Size(1397, 593);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -274,13 +244,11 @@
             this.Controls.Add(this.dataGridRecentProducts);
             this.Controls.Add(this.btnRefreshRecentData);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnSupplies);
             this.Controls.Add(this.btnProducts);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -292,9 +260,5 @@
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
